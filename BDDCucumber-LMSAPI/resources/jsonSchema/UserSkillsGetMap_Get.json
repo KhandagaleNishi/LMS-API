@@ -1,0 +1,67 @@
+{
+    "$schema": "http://json-schema.org/draft-06/schema#",
+    "$ref": "#/definitions/Welcome5",
+    "definitions": {
+        "Welcome5": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "users": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/definitions/User"
+                    }
+                }
+            },
+            "required": [
+                "users"
+            ],
+            "title": "Welcome5"
+        },
+        "User": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "id": {
+                    "type": "string"
+                },
+                "firstName": {
+                    "type": "string"
+                },
+                "lastName": {
+                    "type": "string"
+                },
+                "skillmap": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/definitions/Skillmap"
+                    }
+                }
+            },
+            "required": [
+                "firstName",
+                "id",
+                "lastName",
+                "skillmap"
+            ],
+            "title": "User"
+        },
+        "Skillmap": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "id": {
+                    "type": "integer"
+                },
+                "skill": {
+                    "type": "string"
+                }
+            },
+            "required": [
+                "id",
+                "skill"
+            ],
+            "title": "Skillmap"
+        }
+    }
+}

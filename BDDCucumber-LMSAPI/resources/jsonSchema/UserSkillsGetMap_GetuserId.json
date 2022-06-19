@@ -1,0 +1,93 @@
+{
+	"definitions": {},
+	"$schema": "http://json-schema.org/draft-07/schema#", 
+	"$id": "https://example.com/object1654576587.json", 
+	"title": "Root", 
+	"type": "object",
+	"required": [
+		"users"
+	],
+	"properties": {
+		"users": {
+			"$id": "#root/users", 
+			"title": "Users", 
+			"type": "object",
+			"required": [
+				"id",
+				"firstName",
+				"lastName",
+				"skillmap"
+			],
+			"properties": {
+				"id": {
+					"$id": "#root/users/id", 
+					"title": "Id", 
+					"type": "string",
+					"default": "",
+					"examples": [
+						"U18"
+					],
+					"pattern": "^.*$"
+				},
+				"firstName": {
+					"$id": "#root/users/firstName", 
+					"title": "Firstname", 
+					"type": "string",
+					"default": "",
+					"examples": [
+						"Rama"
+					],
+					"pattern": "^.*$"
+				},
+				"lastName": {
+					"$id": "#root/users/lastName", 
+					"title": "Lastname", 
+					"type": "string",
+					"default": "",
+					"examples": [
+						"Rama"
+					],
+					"pattern": "^.*$"
+				},
+				"skillmap": {
+					"$id": "#root/users/skillmap", 
+					"title": "Skillmap", 
+					"type": "array",
+					"default": [],
+					"items":{
+						"$id": "#root/users/skillmap/items", 
+						"title": "Items", 
+						"type": "object",
+						"required": [
+							"id",
+							"skill"
+						],
+						"properties": {
+							"id": {
+								"$id": "#root/users/skillmap/items/id", 
+								"title": "Id", 
+								"type": "integer",
+								"examples": [
+									3
+								],
+								"default": 0
+							},
+							"skill": {
+								"$id": "#root/users/skillmap/items/skill", 
+								"title": "Skill", 
+								"type": "string",
+								"default": "",
+								"examples": [
+									"selenium update"
+								],
+								"pattern": "^.*$"
+							}
+						}
+					}
+
+				}
+			}
+		}
+
+	}
+}

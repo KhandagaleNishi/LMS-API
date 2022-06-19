@@ -1,0 +1,35 @@
+{
+    "$schema": "http://json-schema.org/draft-06/schema#",
+    "$ref": "#/definitions/Welcome4",
+    "definitions": {
+        "Welcome4": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "user_skill_id": {
+                    "type": "string"
+                },
+                "user_id": {
+                    "type": "string"
+                },
+                "skill_id": {
+                    "type": "integer"
+                },
+                "months_of_exp": {
+                    "type": "integer"
+                },
+                "message_response": {
+                    "type": "string"
+                }
+            },
+            "required": [
+                "message_response",
+                "months_of_exp",
+                "skill_id",
+                "user_id",
+                "user_skill_id"
+            ],
+            "title": "Welcome4"
+        }
+    }
+}

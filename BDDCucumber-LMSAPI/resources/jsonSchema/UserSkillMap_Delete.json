@@ -1,0 +1,23 @@
+{
+    "$schema": "http://json-schema.org/draft-06/schema#",
+    "$ref": "#/definitions/Welcome3",
+    "definitions": {
+        "Welcome3": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "user_skill_id": {
+                    "type": "string"
+                },
+                "message_response": {
+                    "type": "string"
+                }
+            },
+            "required": [
+                "message_response",
+                "user_skill_id"
+            ],
+            "title": "Welcome3"
+        }
+    }
+}

@@ -1,0 +1,66 @@
+{
+    "$schema": "http://json-schema.org/draft-06/schema#",
+    "type": "array",
+    "items": {
+        "$ref": "#/definitions/Welcome2Element"
+    },
+    "definitions": {
+        "Welcome2Element": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "user_id": {
+                    "type": "string"
+                },
+                "name": {
+                    "type": "string"
+                },
+                "phone_number": {
+                    "type": "integer"
+                },
+                "location": {
+                    "type": "string"
+                },
+                "time_zone": {
+                    "$ref": "#/definitions/TimeZone"
+                },
+                "linkedin_url": {
+                    "anyOf": [
+                        {
+                            "type": "null"
+                        },
+                        {
+                            "type": "string",
+                            "qt-uri-protocols": [
+                                "https"
+                            ]
+                        }
+                    ]
+                }
+            },
+            "required": [
+                "linkedin_url",
+                "location",
+                "name",
+                "phone_number",
+                "time_zone",
+                "user_id"
+            ],
+            "title": "Welcome2Element"
+        },
+        "TimeZone": {
+            "type": "string",
+            "enum": [
+                "EST",
+                "CST",
+                "PST",
+                "MST",
+                "cst",
+                "est",
+                "IST",
+                "pst"
+            ],
+            "title": "TimeZone"
+        }
+    }
+}
